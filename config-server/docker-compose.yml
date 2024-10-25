@@ -1,0 +1,13 @@
+services:
+  app-config:
+    image: gussoft/config-server:1.0.0
+    ports:
+      - "8888:8888"
+    environment:
+      SEARCH_PATH: data-config
+    networks:
+      - cs-guss
+
+networks:
+  cs-guss:
+    driver: bridge

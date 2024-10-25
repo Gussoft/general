@@ -1,0 +1,16 @@
+services:
+  app-eureka:
+    image: gussoft/eureka-service:1.0.0
+    ports:
+      - "8761:8761"
+    environment:
+      SEARCH_PATH: data-config
+    networks:
+      - cs-guss
+
+networks:
+  cs-guss:
+    driver: bridge
+
+
+
